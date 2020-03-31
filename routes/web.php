@@ -17,9 +17,16 @@ Route::get('/', function () {
 
 
 Route::get('/login', 'LoginController@index');
-
 Route::post('/login', 'LoginController@verify');
 
-Route::get('/home', 'HomeController@index');
-
 Route::get('/logout', 'LogoutController@index');
+
+Route::get('/home', 'HomeController@index');
+Route::get('/home/profile', 'HomeController@profile');
+
+Route::get('/home/add', 'HomeController@addUserView');
+Route::post('/home/add', 'HomeController@adduser');
+
+
+Route::get('/home/userlist', 'HomeController@userList');
+

@@ -18,6 +18,8 @@ class LoginController extends Controller
 
         if (count($valid)>0) {
 
+            $req->session()->put('uname',$req->username);
+
             return redirect('/home');
         }
         else
